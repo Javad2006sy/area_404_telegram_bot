@@ -1,3 +1,7 @@
 from telebot import TeleBot
+from dotenv import dotenv_values
 
-bot = TeleBot('api token')
+# Config Variables
+CONFIG = dotenv_values()
+
+bot = TeleBot(CONFIG['API_KEY'])
